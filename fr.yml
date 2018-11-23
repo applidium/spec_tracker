@@ -1,0 +1,9 @@
+:fr:
+  :missing_specs: Le fichier de spécification n'a pas été fourni
+  :bad_format: Le fichier de specs n'est pas un csv
+  :too_many_arguments: Trop d'arguments ont été fournis
+  :scenario_id: Identifiant du scénario
+  :scenario_name: Nom du scénario
+  :test_result: Statut du test
+  :output_title: Matrice de traçabilité
+  :progression: Progression

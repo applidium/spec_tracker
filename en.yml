@@ -1,0 +1,9 @@
+:en:
+  :missing_specs: Missing requirements files
+  :bad_format: The requirement file is not a csv
+  :too_many_arguments: Too many arguments
+  :scenario_id: Scenario ID
+  :scenario_name: Scenario Name
+  :test_result: Test Result
+  :output_title: Traceability Matrix
+  :progression: Progression
