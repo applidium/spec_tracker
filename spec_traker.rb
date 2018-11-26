@@ -55,7 +55,6 @@ CSV.foreach(path_to_specs, headers: true, skip_blanks: true) do |row|
   next if row[SCENARIO_ID_SPEC_HEADER].nil?
   scenario_list << { scenario_id: row[SCENARIO_ID_SPEC_HEADER], scenario_name: row[SCENARIO_NAME_SPEC_HEADER] }
 end
-puts scenario_list
 
 # Process test report - Iterate over files
 test_results = []
