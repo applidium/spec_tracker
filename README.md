@@ -1,30 +1,29 @@
-# spec_tracker
-Track tests that validate specification use cases
+# SpecTracker
 
-## Dependencies
+Simple visualization of specification use cases with the corresponding test status (fail or pass).
+Prompts a traceability matrix from JUnit generated reports and a csv describing scenarios.
 
-This script is tested with `ruby >= 2.3.0`.
+## Installation
 
-You will need to install `terminal-table`, `gemoji` and `nokogiri` before using this script
+Add this line to your application's Gemfile:
+
+```ruby
+gem 'spec_tracker'
 ```
-$ gem install terminal-table gemoji nokogiri
-```
+
+And then execute:
+
+    $ bundle
+
+Or install it yourself as:
+
+    $ gem install spec_tracker
 
 ## Usage
 
-### Specification file
-#### General syntax rules
-This script uses *JUnit* generated reports.
-To link a scenario with a test you should put ``#<scenario-id>`` in the test name.
-
-### Command Line
-
-```
-$ ruby spec_tracker.rb <path-to-spec-file> <path-to-reports-folder>
-```
-
-
-## Output
+TODO: Write usage instructions here
+This script is tested with `ruby >= 2.3.0`.
+To link a scenario with a test, put ``#<scenario-id>`` in the test name.
 
 Eg:
 ```
@@ -60,8 +59,12 @@ Eg:
 +-------------+--------------------------------------------+-------------+
 ```
 
-## Improvement ideas
-  - choose export mode : tests without matching scenario or scenario without matching test
-  - Handle multiple spec files
-  - Use google spreadsheets as spec file (with one or more sheets)
-  - better opts handling
+## Development
+
+After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+
+To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+
+## Contributing
+
+Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/spec_tracker.

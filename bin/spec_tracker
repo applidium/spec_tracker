@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+require "spec_tracker"
+
+
+SpecTracker.configure { |configuration| };
+SpecTracker::ReportTask.new.execute
