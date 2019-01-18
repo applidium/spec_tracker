@@ -8,7 +8,7 @@ module SpecTracker
 
         def print(report)
           terminal_table = ::Terminal::Table.new do |t|
-            t.title = report.topic || SpecTracker.configuration.wording[:output_title]
+            t.title = report.topic
             t.headings = [
               SpecTracker.configuration.wording[:scenario_id],
               SpecTracker.configuration.wording[:scenario_name],
