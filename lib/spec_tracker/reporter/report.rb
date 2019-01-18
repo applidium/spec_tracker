@@ -1,10 +1,11 @@
 module SpecTracker
   module Reporter
     class Report
-      attr_reader :data
+      attr_reader :data, :topic
 
-      def initialize(data)
+      def initialize(data:, topic:)
         @data = data
+        @topic = topic
       end
 
       def progression

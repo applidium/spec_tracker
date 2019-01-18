@@ -11,6 +11,7 @@ require 'spec_tracker/config/configuration'
 require 'spec_tracker/test_status'
 
 require 'spec_tracker/spec_parser/scenario'
+require 'spec_tracker/spec_parser/specification'
 require 'spec_tracker/spec_parser/base_parser'
 require 'spec_tracker/spec_parser/csv_parser'
 

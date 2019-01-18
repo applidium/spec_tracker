@@ -10,10 +10,16 @@ module SpecTracker
     end
 
     def execute
-      scenarios = spec_parser.parse(SpecTracker.configuration.spec_path)
+      specifications = spec_parser.parse(SpecTracker.configuration.spec_path)
       test_results = test_report_parser.parse(SpecTracker.configuration.test_reports_path)
-      report = report_mapper.map(scenarios: scenarios, test_results: test_results)
-      reporter.print(report)
+      specifications.map do |specification|
+        report = report_mapper.map(
+          topic: specification.topic,
+          scenarios: specification.scenarios,
+          test_results: test_results
+        )
+        reporter.print(report)
+      end
     end
   end
 end
