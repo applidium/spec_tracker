@@ -11,7 +11,7 @@ module SpecTracker
 
     def execute
       specifications = spec_parser.parse(SpecTracker.configuration.spec_path)
-      test_results = test_report_parser.parse(SpecTracker.configuration.test_reports_path)
+      test_results = test_report_parser.parse(SpecTracker.configuration.test_report_path)
       specifications.map do |specification|
         report = report_mapper.map(
           topic: specification.topic,
