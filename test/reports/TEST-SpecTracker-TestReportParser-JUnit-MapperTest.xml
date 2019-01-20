@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="SpecTracker::TestReportParser::JUnit::MapperTest" filepath="/Users/joannavigne/Projects/spec_tracker/test/test_report_parser/j_unit/mapper_test.rb" skipped="0" failures="0" errors="0" tests="3" assertions="4" time="0.0012289999867789447">
+    <testcase name="test_return_failed_result_from_failure_testcase" lineno="25" classname="SpecTracker::TestReportParser::JUnit::MapperTest" assertions="1" time="0.0010020000045187771">
+    </testcase>
+    <testcase name="test_return_skipped_result_from_skipped_testcase" lineno="34" classname="SpecTracker::TestReportParser::JUnit::MapperTest" assertions="1" time="0.00014000001829117537">
+    </testcase>
+    <testcase name="test_return_success_result_from_success_testcase" lineno="15" classname="SpecTracker::TestReportParser::JUnit::MapperTest" assertions="2" time="8.699996396899223e-05">
+    </testcase>
+  </testsuite>
+</testsuites>
