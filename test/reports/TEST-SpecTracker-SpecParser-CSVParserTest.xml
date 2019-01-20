@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="SpecTracker::SpecParser::CSVParserTest" filepath="/Users/joannavigne/Projects/spec_tracker/test/spec_parser/csv_parser_test.rb" skipped="0" failures="0" errors="0" tests="1" assertions="12" time="0.002648000023327768">
+    <testcase name="test_get_scenarios_from_one_file" lineno="13" classname="SpecTracker::SpecParser::CSVParserTest" assertions="12" time="0.002648000023327768">
+    </testcase>
+  </testsuite>
+</testsuites>
