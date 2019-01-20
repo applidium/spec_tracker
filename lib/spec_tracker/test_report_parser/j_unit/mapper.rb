@@ -1,7 +1,7 @@
 module SpecTracker
   module TestReportParser
     module JUnit
-      class JUnitMapper < BaseMapper
+      class Mapper < BaseMapper
         private
 
         def get_scenario_name(test_case)

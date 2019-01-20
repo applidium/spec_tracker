@@ -4,7 +4,7 @@ module SpecTracker
       class Parser < BaseParser
         def initialize
           super
-          @test_result_mapper = JUnitMapper.new
+          @test_result_mapper = Mapper.new
         end
 
         private
