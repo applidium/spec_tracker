@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="SpecTrackerTest" filepath="/Users/joannavigne/Projects/spec_tracker/test/spec_tracker_test.rb" skipped="0" failures="0" errors="0" tests="3" assertions="13" time="0.0005069999606348574">
+    <testcase name="test_should_apply_default_configuration" lineno="12" classname="SpecTrackerTest" assertions="6" time="3.2999960239976645e-05">
+    </testcase>
+    <testcase name="test_should_apply_local_configuration" lineno="22" classname="SpecTrackerTest" assertions="6" time="0.00046499999007210135">
+    </testcase>
+    <testcase name="test_that_it_has_a_version_number" lineno="8" classname="SpecTrackerTest" assertions="1" time="9.000010322779417e-06">
+    </testcase>
+  </testsuite>
+</testsuites>
