@@ -11,8 +11,8 @@ module SpecTracker
       end
 
       def test_get_scenarios_from_one_file
-        file = Pathname.new(__FILE__).join('../csv_files/single/specifications.csv')
-        specifications = CSVParser.new.parse(file)
+        path = Pathname.new(__FILE__).join('../csv_files/single/specifications.csv')
+        specifications = CSVParser.new.parse(path)
         assert_equal 1, specifications.size
         specification = specifications.first
         assert_equal 5, specification.scenarios.size
@@ -27,6 +27,13 @@ module SpecTracker
           assert_equal expected_values[index][:id], scenario.id
           assert_equal expected_values[index][:name], scenario.name
         end
+      end
+
+      def test_get_scenarios_from_multiple_files
+        path = Pathname.new(__FILE__).join('../csv_files/multiple')
+        specifications = CSVParser.new.parse(path)
+        assert_equal 2, specifications.size
+        assert_equal [5, 5], specifications.map(&:scenarios).flat_map(&:size)
       end
     end
   end
