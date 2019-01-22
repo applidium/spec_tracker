@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuites>
-  <testsuite name="SpecTracker::SpecParser::CSVParserTest" filepath="/Users/joannavigne/Projects/spec_tracker/test/spec_parser/csv_parser_test.rb" skipped="0" failures="0" errors="0" tests="2" assertions="14" time="0.00853400002233684">
-    <testcase name="test_get_scenarios_from_multiple_files" lineno="32" classname="SpecTracker::SpecParser::CSVParserTest" assertions="2" time="0.005818000005092472">
-    </testcase>
-    <testcase name="test_get_scenarios_from_one_file" lineno="13" classname="SpecTracker::SpecParser::CSVParserTest" assertions="12" time="0.002716000017244369">
-    </testcase>
-  </testsuite>
-</testsuites>

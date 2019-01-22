@@ -4,7 +4,7 @@
 /coverage/
 /doc/
 /pkg/
-/spec/reports/
+/test/reports/
 /tmp/
 .byebug_history
 .idea
