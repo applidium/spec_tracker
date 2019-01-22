@@ -43,6 +43,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'nokogiri', '~> 1.10'
   spec.add_dependency 'terminal-table', '~> 1.8'
   spec.add_dependency 'gemoji', '~> 3.0'
+  spec.add_dependency 'thor', '~> 0.20'
 
   spec.required_ruby_version     = "~> 2.3"
 end
