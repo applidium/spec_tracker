@@ -4,10 +4,12 @@ require 'yaml'
 require 'nokogiri'
 require 'terminal-table'
 require 'gemoji'
+require 'thor'
 
 require 'spec_tracker/version'
 require 'spec_tracker/config/configuration'
 require 'spec_tracker/test_status'
+require 'spec_tracker/cli'
 
 require 'spec_tracker/spec_parser/scenario'
 require 'spec_tracker/spec_parser/specification'

@@ -1,7 +1,5 @@
 #!/usr/bin/env ruby
 
-require "spec_tracker"
+require 'spec_tracker'
 
-
-SpecTracker.configure { |configuration| };
-SpecTracker::ReportTask.new.execute
+SpecTracker::CLI.start(ARGV)
