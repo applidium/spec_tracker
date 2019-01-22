@@ -1,7 +1,6 @@
+require 'pathname'
 require 'csv'
 require 'yaml'
-require 'Pathname'
-require 'byebug'
 require 'nokogiri'
 require 'terminal-table'
 require 'gemoji'
