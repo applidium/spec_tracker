@@ -9,13 +9,13 @@ module SpecTracker
       @scenario_id_header = '#Scenario'
       @scenario_name_header = 'Name/Rule'
       @locale = 'fr'
-      @spec_path = # add path to spec
-      @test_report_path = './test/reports'
+      @spec_path = 'specifications'
+      @test_report_path = 'test/reports'
       @available_locales = %w(fr en)
       wording_path = Pathname.new(__FILE__).join("../#{locale}.yml")
       @wording = YAML.load_file(wording_path)[:"#{locale}"]
       @local_path = Pathname.new(Dir.pwd)
-      @scenario_id_regex = '#\[(.+)\]'
+      @scenario_id_regex = '#((\d\.?)*\d)'
     end
   end
 end

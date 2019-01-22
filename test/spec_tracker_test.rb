@@ -14,8 +14,8 @@ class SpecTrackerTest < Minitest::Test
     assert_equal '#Scenario', SpecTracker.configuration.scenario_id_header
     assert_equal 'Name/Rule', SpecTracker.configuration.scenario_name_header
     assert_equal 'fr', SpecTracker.configuration.locale
-    assert_equal '../../Sources/46_Access_Control_GW/test/reports/', SpecTracker.configuration.test_report_path
-    assert_equal './specifications/Access_Control_Syncrospec2018 - [SPECTEST] Access_Control.csv', SpecTracker.configuration.spec_path
+    assert_equal 'test/reports', SpecTracker.configuration.test_report_path
+    assert_equal 'specifications', SpecTracker.configuration.spec_path
     assert_equal '#((\d\.?)*\d)', SpecTracker.configuration.scenario_id_regex
   end
 
