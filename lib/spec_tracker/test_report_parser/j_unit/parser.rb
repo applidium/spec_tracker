@@ -3,7 +3,6 @@ module SpecTracker
     module JUnit
       class Parser < BaseParser
         def initialize
-          super
           @test_result_mapper = Mapper.new
         end
 
