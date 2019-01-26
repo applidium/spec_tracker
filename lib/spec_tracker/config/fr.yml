@@ -5,5 +5,4 @@
   :scenario_id: Identifiant du scénario
   :scenario_name: Nom du scénario
   :test_result: Statut du test
-  :output_title: Matrice de traçabilité
   :progression: Progression

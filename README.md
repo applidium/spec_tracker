@@ -1,32 +1,43 @@
-# spec_tracker
-Track tests that validate specification use cases
+# SpecTracker
 
-## Dependencies
+Parse CSV specifications, match them with JUnit reports and print the corresponding traceability matrix in the terminal.
 
-This script is tested with `ruby >= 2.3.0`.
+## Installation
 
-You will need to install `terminal-table`, `gemoji` and `nokogiri` before using this script
+Add this line to your application's Gemfile:
+
+```ruby
+gem 'spec_tracker'
 ```
-$ gem install terminal-table gemoji nokogiri
-```
+
+And then execute:
+
+    $ bundle
+
+Or install it yourself as:
+
+    $ gem install spec_tracker
 
 ## Usage
 
-### Specification file
-#### General syntax rules
-This script uses *JUnit* generated reports.
-To link a scenario with a test you should put ``#<scenario-id>`` in the test name.
+### Configuration
 
-### Command Line
+| Parameter | Value | Usage |
+| --------- | ----- | ------- |
+| `spec_path` | 'specifications' | Path to the specification file(s). Expects a relative path to a file or a director |
+| `test_report_path` | 'test/reports' | Path to the test reports. Expects a relative path to a file or a directory |
+| `scenario_id_header` | '#Scenario' | Header of the CSV column that contains the scenario names |
+| `scenario_name_header` | 'Name/Rule' | Header of the CSV column that contains the scenario IDs |
+| `scenario_id_regex` | '#((\d\.?)*\d)' | Regexp to find scenario IDs in the test names |
+| `locale` | 'fr' | Locale for text output |
 
-```
-$ ruby spec_tracker.rb <path-to-spec-file> <path-to-reports-folder>
-```
+    
+    $ spec_tracker report
+    
 
 
-## Output
+Output example:
 
-Eg:
 ```
 +-------------+--------------------------------------------+-------------+
 |                            Traceability Matrix                         |
@@ -60,8 +71,18 @@ Eg:
 +-------------+--------------------------------------------+-------------+
 ```
 
-## Improvement ideas
-  - choose export mode : tests without matching scenario or scenario without matching test
-  - Handle multiple spec files
-  - Use google spreadsheets as spec file (with one or more sheets)
-  - better opts handling
+Help to configure the report command :
+
+    
+    $ spec_tracker help report
+    
+
+## Development
+
+After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+
+To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+
+## Contributing
+
+Bug reports and pull requests are welcome on GitHub at https://github.com/jvigne/spec_tracker.
