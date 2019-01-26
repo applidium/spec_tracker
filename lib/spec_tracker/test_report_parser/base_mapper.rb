@@ -33,7 +33,7 @@ module SpecTracker
       end
 
       def scenario_id_regex
-        Regexp.new(SpecTracker.configuration.scenario_id_regex)
+        SpecTracker.configuration.scenario_id_regex
       end
 
       def get_scenario_status(testcase)

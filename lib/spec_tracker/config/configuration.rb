@@ -6,7 +6,7 @@ module SpecTracker
     attr_reader :wording, :local_path
 
     def initialize
-      @scenario_id_header = '#Scenario'
+      @scenario_id_header = 'Scenario ID'
       @scenario_name_header = 'Name/Rule'
       @locale = 'fr'
       @spec_path = 'specifications'
@@ -15,7 +15,7 @@ module SpecTracker
       wording_path = Pathname.new(__FILE__).join("../#{locale}.yml")
       @wording = YAML.load_file(wording_path)[:"#{locale}"]
       @local_path = Pathname.new(Dir.pwd)
-      @scenario_id_regex = '#((\d\.?)*\d)'
+      @scenario_id_regex = /\[([a-zA-Z\-]+)\]/
     end
   end
 end

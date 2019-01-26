@@ -7,7 +7,7 @@ module SpecTracker
         def setup
           SpecTracker.configure do |configuration|
             configuration.scenario_name_header = 'Name/Rule'
-            configuration.scenario_id_regex = '#((\d\.?)*\d)'
+            configuration.scenario_id_regex = /#((\d\.?)*\d)/
           end
           @mapper = Mapper.new
         end
