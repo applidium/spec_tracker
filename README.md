@@ -1,7 +1,6 @@
 # SpecTracker
 
-Simple visualization of specification use cases with the corresponding test status (fail or pass).
-Prompts a traceability matrix from JUnit generated reports and a csv describing scenarios.
+Parse CSV specifications, match them with JUnit reports and print the corresponding traceability matrix in the terminal.
 
 ## Installation
 
@@ -21,11 +20,24 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
-This script is tested with `ruby >= 2.3.0`.
-To link a scenario with a test, put ``#<scenario-id>`` in the test name.
+### Configuration
 
-Eg:
+| Parameter | Value | Usage |
+| --------- | ----- | ------- |
+| `spec_path` | 'specifications' | Path to the specification file(s). Expects a relative path to a file or a director |
+| `test_report_path` | 'test/reports' | Path to the test reports. Expects a relative path to a file or a directory |
+| `scenario_id_header` | '#Scenario' | Header of the CSV column that contains the scenario names |
+| `scenario_name_header` | 'Name/Rule' | Header of the CSV column that contains the scenario IDs |
+| `scenario_id_regex` | '#((\d\.?)*\d)' | Regexp to find scenario IDs in the test names |
+| `locale` | 'fr' | Locale for text output |
+
+    
+    $ spec_tracker report
+    
+
+
+Output example:
+
 ```
 +-------------+--------------------------------------------+-------------+
 |                            Traceability Matrix                         |
@@ -59,6 +71,12 @@ Eg:
 +-------------+--------------------------------------------+-------------+
 ```
 
+Help to configure the report command :
+
+    
+    $ spec_tracker help report
+    
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
@@ -67,4 +85,4 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/spec_tracker.
+Bug reports and pull requests are welcome on GitHub at https://github.com/jvigne/spec_tracker.
