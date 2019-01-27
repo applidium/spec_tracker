@@ -28,6 +28,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "minitest", "~> 5.0"
   spec.add_development_dependency "byebug", '~> 9.0'
   spec.add_development_dependency "minitest-reporters", '~> 1.3'
+  spec.add_development_dependency "activesupport", '>= 3.0', '< 6.0'
   spec.add_dependency 'nokogiri', '~> 1.10'
   spec.add_dependency 'terminal-table', '~> 1.8'
   spec.add_dependency 'gemoji', '~> 3.0'

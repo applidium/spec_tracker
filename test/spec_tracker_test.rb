@@ -1,25 +1,25 @@
 require "test_helper"
 
-class SpecTrackerTest < Minitest::Test
+class SpecTrackerTest < BaseTest
   def teardown
     SpecTracker.configuration = nil
   end
 
-  def test_that_it_has_a_version_number
+  test 'it has a version number' do
     refute_nil ::SpecTracker::VERSION
   end
 
-  def test_should_apply_default_configuration
+  test '[default-configuration] should_apply_default_configuration' do
     SpecTracker.configure { |_| }
-    assert_equal '#Scenario', SpecTracker.configuration.scenario_id_header
+    assert_equal 'Scenario ID', SpecTracker.configuration.scenario_id_header
     assert_equal 'Name/Rule', SpecTracker.configuration.scenario_name_header
     assert_equal 'fr', SpecTracker.configuration.locale
     assert_equal 'test/reports', SpecTracker.configuration.test_report_path
     assert_equal 'specifications', SpecTracker.configuration.spec_path
-    assert_equal '#((\d\.?)*\d)', SpecTracker.configuration.scenario_id_regex
+    assert_equal /\[([a-zA-Z\-]+)\]/, SpecTracker.configuration.scenario_id_regex
   end
 
-  def test_should_apply_local_configuration
+  test '[local-configuration] should_apply_local_configuration' do
     SpecTracker.configure do |configuration|
       configuration.scenario_id_header = 'custom-id-header'
       configuration.scenario_name_header = 'custom-name-header'

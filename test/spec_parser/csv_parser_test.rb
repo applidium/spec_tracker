@@ -2,7 +2,7 @@ require 'test_helper'
 
 module SpecTracker
   module SpecParser
-    class CSVParserTest < Minitest::Test
+    class CSVParserTest < BaseTest
       def setup
         SpecTracker.configure do |configuration|
           configuration.scenario_id_header = '#Scenario'
@@ -10,7 +10,7 @@ module SpecTracker
         end
       end
 
-      def test_get_scenarios_from_one_file
+      test '[single-csv-file] get_scenarios_from_one_file' do
         path = Pathname.new(__FILE__).join('../csv_files/single/specifications.csv')
         specifications = CSVParser.new.parse(path)
         assert_equal 1, specifications.size
@@ -29,7 +29,7 @@ module SpecTracker
         end
       end
 
-      def test_get_scenarios_from_multiple_files
+      test '[multiple-csv-files] get_scenarios_from_multiple_files' do
         path = Pathname.new(__FILE__).join('../csv_files/multiple')
         specifications = CSVParser.new.parse(path)
         assert_equal 2, specifications.size
