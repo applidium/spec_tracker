@@ -18,14 +18,6 @@ module SpecTracker
 
       protected
 
-      def scenario_id_header
-        SpecTracker.configuration.scenario_id_header
-      end
-
-      def scenario_name_header
-        SpecTracker.configuration.scenario_name_header
-      end
-
       def spec_file_extension
         raise Error.new('override me!')
       end
