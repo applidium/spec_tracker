@@ -22,54 +22,41 @@ Or install it yourself as:
 
 ### Configuration
 
-| Parameter | Value | Usage |
+| Parameter | Value | Description |
 | --------- | ----- | ------- |
 | `spec_path` | 'specifications' | Path to the specification file(s). Expects a relative path to a file or a director |
 | `test_report_path` | 'test/reports' | Path to the test reports. Expects a relative path to a file or a directory |
-| `scenario_id_header` | '#Scenario' | Header of the CSV column that contains the scenario names |
+| `scenario_id_header` | 'Scenario ID' | Header of the CSV column that contains the scenario names |
 | `scenario_name_header` | 'Name/Rule' | Header of the CSV column that contains the scenario IDs |
-| `scenario_id_regex` | '#((\d\.?)*\d)' | Regexp to find scenario IDs in the test names |
+| `scenario_id_regex` | `/\[([a-zA-Z\-]+)\]/` | Regexp to find scenario IDs in the test names. Default is kebab-case words |
 | `locale` | 'fr' | Locale for text output |
+
+### CLI
 
     
     $ spec_tracker report
+    +---------------------------+-----------------------------------------------------------+----------------+
+    |                            some_specification_file.csv                                |                |
+    +---------------------------+-----------------------------------------------------------+----------------+
+    | Identifiant du scénario   | Nom du scénario                                           | Statut du test |
+    +---------------------------+-----------------------------------------------------------+----------------+
+    |    sign-up                | [MyProject] Scenario 4.1.1                                |     ✅         |
+    |    login                  | [MyProject] Scenario 4.2.1                                |     ✅         |
+    |    logout                 | [MyProject] Scenario 4.3.1                                |     😶         |
+    |    delete-account         | [MyProject] Scenario 5.1.1                                |     ❌         |
+    |    news-feed              | [MyProject] Scenario 5.1.2                                |     ✅         |
+    |    like-news              | [MyProject] Scenario 5.1.3                                |     ✅         |
+    |    unlike-news            | [MyProject] Scenario 5.1.4                                |     ❌         |
+    |    topics                 | [MyProject] Scenario 5.1.5                                |     😶         |
+    |    subscribe-topic        | [MyProject] Scenario 5.1.6                                |     😶         |
+    |    unsubscribe-topic      | [MyProject] Scenario 6.1.1                                |     😶         |
+    |    account-information    | [MyProject] Scenario 6.1.2                                |     😶         |
+    |    reset-password         | [MyProject] Scenario 6.1.3                                |     😶         |
+    +---------------------------+-----------------------------------------------------------+----------------+
+    |    Progression            |                                                           |     33%        |
+    +---------------------------+-----------------------------------------------------------+----------------+
     
 
-
-Output example:
-
-```
-+-------------+--------------------------------------------+-------------+
-|                            Traceability Matrix                         |
-+-------------+--------------------------------------------+-------------+
-| Scenario ID | Scenario Name                              | Test Result |
-+-------------+--------------------------------------------+-------------+
-|    4.1.1    | [MyProject] Scenario name for 4.1.1        |     ❌      |
-|    4.2.1    | [MyProject] Scenario name for 4.2.1        |     ❌      |
-|    4.3.1    | [MyProject] Scenario name for 4.3.1        |     ❌      |
-|    5.1.1    | [MyProject] Scenario name for 5.1.1        |     ✅      |
-|    5.1.2    | [MyProject] Scenario name for 5.1.2        |     ❌      |
-|    5.1.3    | [MyProject] Scenario name for 5.1.3        |     ❌      |
-|    5.1.4    | [MyProject] Scenario name for 5.1.4        |     ❌      |
-|    5.1.5    | [MyProject] Scenario name for 5.1.5        |     ❌      |
-|    5.1.6    | [MyProject] Scenario name for 5.1.6        |     ❌      |
-|    6.1.1    | [MyProject] Scenario name for 6.1.1        |     ✅      |
-|    6.1.2    | [MyProject] Scenario name for 6.1.2        |     ✅      |
-|    6.1.3    | [MyProject] Scenario name for 6.1.3        |     ✅      |
-|    6.1.4    | [MyProject] Scenario name for 6.1.4        |     ✅      |
-|    6.1.5    | [MyProject] Scenario name for 6.1.5        |     ✅      |
-|    6.1.6    | [MyProject] Scenario name for 6.1.6        |     ✅      |
-|    7.1.1    | [MyProject] Scenario name for 7.1.1        |     ✅      |
-|    7.2.1    | [MyProject] Scenario name for 7.2.1        |     ✅      |
-|    7.3.1    | [MyProject] Scenario name for 7.3.1        |     ❌      |
-|    8.1.1    | [MyProject] Scenario name for 8.1.1        |     ❌      |
-|    8.1.2    | [MyProject] Scenario name for 8.1.2        |     ❌      |
-|    8.1.3    | [MyProject] Scenario name for 8.1.3        |     ❌      |
-|    8.1.4    | [MyProject] Scenario name for 8.1.4        |     ❌      |
-+-------------+--------------------------------------------+-------------+
-| Progression |                                            |     41%     |
-+-------------+--------------------------------------------+-------------+
-```
 
 Help to configure the report command :
 

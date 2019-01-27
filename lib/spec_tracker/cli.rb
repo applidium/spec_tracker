@@ -14,7 +14,7 @@ module SpecTracker
           configuration.scenario_id_header = options[:scenario_id_header] if options[:scenario_id_header]
           configuration.scenario_name_header = options[:scenario_name_header] if options[:scenario_name_header]
           configuration.locale = options[:locale] if options[:locale]
-          configuration.scenario_id_regex = options[:scenario_id_regex] if options[:scenario_id_regex]
+          configuration.scenario_id_regex = Regexp.new(options[:scenario_id_regex]) if options[:scenario_id_regex]
         end
         SpecTracker::ReportTask.new.execute
       end
