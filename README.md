@@ -31,30 +31,38 @@ Or install it yourself as:
 | `scenario_id_regex` | `/\[([a-zA-Z\-]+)\]/` | Regexp to find scenario IDs in the test names. Default is kebab-case words |
 | `locale` | 'fr' | Locale for text output |
 
+### Test result symbols
+
+| Symbol | Meaning |
+| ---------: | ------- |
+| ✅ | There is a test for this scenario and it PASSES |
+| 😶 | No tests were found for this scenario |
+| ❌ | There is a test for this scenario and if FAILS |
+
 ### CLI
 
     
     $ spec_tracker report
-    +---------------------------+-----------------------------------------------------------+----------------+
-    |                            some_specification_file.csv                                |                |
-    +---------------------------+-----------------------------------------------------------+----------------+
-    | Identifiant du scénario   | Nom du scénario                                           | Statut du test |
-    +---------------------------+-----------------------------------------------------------+----------------+
-    |    sign-up                | [MyProject] Scenario 4.1.1                                |     ✅         |
-    |    login                  | [MyProject] Scenario 4.2.1                                |     ✅         |
-    |    logout                 | [MyProject] Scenario 4.3.1                                |     😶         |
-    |    delete-account         | [MyProject] Scenario 5.1.1                                |     ❌         |
-    |    news-feed              | [MyProject] Scenario 5.1.2                                |     ✅         |
-    |    like-news              | [MyProject] Scenario 5.1.3                                |     ✅         |
-    |    unlike-news            | [MyProject] Scenario 5.1.4                                |     ❌         |
-    |    topics                 | [MyProject] Scenario 5.1.5                                |     😶         |
-    |    subscribe-topic        | [MyProject] Scenario 5.1.6                                |     😶         |
-    |    unsubscribe-topic      | [MyProject] Scenario 6.1.1                                |     😶         |
-    |    account-information    | [MyProject] Scenario 6.1.2                                |     😶         |
-    |    reset-password         | [MyProject] Scenario 6.1.3                                |     😶         |
-    +---------------------------+-----------------------------------------------------------+----------------+
-    |    Progression            |                                                           |     33%        |
-    +---------------------------+-----------------------------------------------------------+----------------+
+    +---------------------------+-------------------------------------+----------------+
+    |                            some_specification_file.csv          |                |
+    +---------------------------+-------------------------------------+----------------+
+    | Identifiant du scénario   | Nom du scénario                     | Statut du test |
+    +---------------------------+-------------------------------------+----------------+
+    |    sign-up                | [MyProject] Scenario 4.1.1          |     ✅         |
+    |    login                  | [MyProject] Scenario 4.2.1          |     ✅         |
+    |    logout                 | [MyProject] Scenario 4.3.1          |     😶         |
+    |    delete-account         | [MyProject] Scenario 5.1.1          |     ❌         |
+    |    news-feed              | [MyProject] Scenario 5.1.2          |     ✅         |
+    |    like-news              | [MyProject] Scenario 5.1.3          |     ✅         |
+    |    unlike-news            | [MyProject] Scenario 5.1.4          |     ❌         |
+    |    topics                 | [MyProject] Scenario 5.1.5          |     😶         |
+    |    subscribe-topic        | [MyProject] Scenario 5.1.6          |     😶         |
+    |    unsubscribe-topic      | [MyProject] Scenario 6.1.1          |     😶         |
+    |    account-information    | [MyProject] Scenario 6.1.2          |     😶         |
+    |    reset-password         | [MyProject] Scenario 6.1.3          |     😶         |
+    +---------------------------+-------------------------------------+----------------+
+    |    Progression            |                                     |     33%        |
+    +---------------------------+-------------------------------------+----------------+
     
 
 
