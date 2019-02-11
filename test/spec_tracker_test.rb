@@ -1,7 +1,7 @@
 require "test_helper"
 
 class SpecTrackerTest < BaseTest
-  def teardown
+  def setup
     SpecTracker.configuration = nil
   end
 
