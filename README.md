@@ -22,14 +22,15 @@ Or install it yourself as:
 
 ### Configuration
 
-| Parameter | Value | Description |
+| Parameter | Default value | Description |
 | --------- | ----- | ------- |
 | `spec_path` | 'specifications' | Path to the specification file(s). Expects a relative path to a file or a director |
-| `test_report_path` | 'test/reports' | Path to the test reports. Expects a relative path to a file or a directory |
+| `spec_type` | 'csv' | Type of specification files. Available values : csv, gherkin |
 | `scenario_id_header` | 'Scenario ID' | Header of the CSV column that contains the scenario names |
 | `scenario_name_header` | 'Name/Rule' | Header of the CSV column that contains the scenario IDs |
 | `scenario_id_regex` | `/\[([a-zA-Z\-]+)\]/` | Regexp to find scenario IDs in the test names. Default is kebab-case words |
-| `locale` | 'fr' | Locale for text output |
+| `test_report_path` | 'test/reports' | Path to the test reports. Expects a relative path to a file or a directory |
+| `locale` | 'fr' | Locale for text output. Available values : fr, en |
 
 ### Test result symbols
 

@@ -9,10 +9,13 @@ module SpecTracker
 
       def parse_single(csv_file)
         scenarios = []
+        scenario_id_header = SpecTracker.configuration.scenario_id_header
+        scenario_name_header = SpecTracker.configuration.scenario_name_header
         CSV.foreach(csv_file, headers: true, skip_blanks: true) do |row|
           next if row[scenario_id_header].nil?
-          scenario = Scenario.new(id: row[scenario_id_header], name: row[scenario_name_header])
-          scenarios << scenario
+          scenario_id = row[scenario_id_header]
+          scenario_name = row[scenario_name_header]
+          scenarios << Scenario.new(id: scenario_id, name: scenario_name)
         end
         scenarios
       end

@@ -3,7 +3,8 @@ module SpecTracker
     attr_reader :spec_parser, :test_report_parser, :report_mapper, :reporter
 
     def initialize
-      @spec_parser = SpecParser::CSVParser.new
+      spec_type = SpecTracker.configuration.spec_type
+      @spec_parser = (spec_type == %q{gherkin}) ? SpecParser::GherkinParser.new : SpecParser::CSVParser.new
       @test_report_parser = TestReportParser::JUnit::Parser.new
       @report_mapper = Reporter::ReportMapper.new
       @reporter = Reporter::Terminal::Reporter.new
