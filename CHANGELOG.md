@@ -4,6 +4,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.0] - 2019-02-13
+### Added
+- dependency to cucumber
+- Gherkin support for csv specifications
+- Configuration parameter `spec_type` to select specification type. csv by default but gherkin is also accepted.
+
+### Changed
+- Moved scenario_id_header and scenario_name_header in csv specification parser
+- License is now MIT instead of Apache 2.0
+- Fix random fail in configuration tests
+
 ## [1.1.0] - 2019-01-27
 ### Added
 - dev dependency to active support to write rails-like test
