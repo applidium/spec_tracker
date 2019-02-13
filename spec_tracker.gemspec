@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{Track tests that validate specification use cases}
   spec.description   = %q{Get an overview of your project traceability matrix.}
-  spec.homepage      = %q{https://github.com/jvigne/spec_tracker}
+  spec.homepage      = %q{https://github.com/applidium/spec_tracker}
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
