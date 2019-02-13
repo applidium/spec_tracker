@@ -6,7 +6,7 @@ require "spec_tracker/version"
 Gem::Specification.new do |spec|
   spec.name          = "spec_tracker"
   spec.version       = SpecTracker::VERSION
-  spec.licenses      = ['Apache-2.0']
+  spec.licenses      = ['MIT']
   spec.authors       = ["Joanna Vigné"]
   spec.email         = ["joanna.vigne@fabernovel.com"]
 
