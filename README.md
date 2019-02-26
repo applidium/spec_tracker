@@ -39,6 +39,7 @@ Or install it yourself as:
 | ✅ | There is a test for this scenario and it PASSES |
 | 😶 | No tests were found for this scenario |
 | ❌ | There is a test for this scenario and if FAILS |
+| ⏩ | There is a SKIPPED test for this scenario |
 
 ### CLI
 
