@@ -12,11 +12,9 @@ module SpecTracker
 
       protected
 
-      def view_models(report_data)
-
+      def displayable_progression(report)
+        "#{report.progression}%" if report.progression
       end
-
-      private
 
       attr_reader :ui_mapper
     end

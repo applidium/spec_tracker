@@ -16,7 +16,7 @@ module SpecTracker
             ]
             t.rows = ui_mapper.map(report)
             t.add_separator
-            t.add_row [SpecTracker.configuration.wording[:progression], nil, "#{report.progression}%"]
+            t.add_row [SpecTracker.configuration.wording[:progression], nil, displayable_progression(report)]
           end
           terminal_table.align_column(2, :center)
           terminal_table.align_column(0, :left)
