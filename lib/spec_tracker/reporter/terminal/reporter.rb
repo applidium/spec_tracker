@@ -19,7 +19,7 @@ module SpecTracker
             t.add_row [SpecTracker.configuration.wording[:progression], nil, "#{report.progression}%"]
           end
           terminal_table.align_column(2, :center)
-          terminal_table.align_column(0, :center)
+          terminal_table.align_column(0, :left)
           puts terminal_table
         end
       end
