@@ -1,6 +1,7 @@
 # SpecTracker
 
-Parse CSV specifications, match them with JUnit reports and print the corresponding traceability matrix in the terminal.
+The principle of the spec tracker is simple.
+Parse specifications, match them with JUnit reports then display the corresponding traceability matrix.
 
 ## Installation
 
@@ -22,15 +23,15 @@ Or install it yourself as:
 
 ### Configuration
 
-| Parameter | Default value | Description |
-| --------- | ----- | ------- |
-| `spec_path` | 'specifications' | Path to the specification file(s). Expects a relative path to a file or a director |
-| `spec_type` | 'csv' | Type of specification files. Available values : csv, gherkin |
-| `scenario_id_header` | 'Scenario ID' | Header of the CSV column that contains the scenario names |
-| `scenario_name_header` | 'Name/Rule' | Header of the CSV column that contains the scenario IDs |
-| `scenario_id_regex` | `/\[([a-zA-Z\-]+)\]/` | Regexp to find scenario IDs in the test names. Default is kebab-case words |
-| `test_report_path` | 'test/reports' | Path to the test reports. Expects a relative path to a file or a directory |
-| `locale` | 'fr' | Locale for text output. Available values : fr, en |
+| Parameter | CLI Parameter | Default value | Description |
+| --------- | --------- | ----- | ------- |
+| `spec_path` | `spec-path` | specifications | Path to the specification file(s). Expects a relative path to a file or a director |
+| `spec_type` | `spec-type` | csv | Type of specification files. Available values : csv, gherkin |
+| `scenario_id_header` | `scenario-id-header` | Scenario ID | Header of the CSV column that contains the scenario names |
+| `scenario_name_header` | `scenario-name-header` | Name/Rule | Header of the CSV column that contains the scenario IDs |
+| `scenario_id_regex` | `scenario-id-regex` | `\[([a-zA-Z\-]+)\]` | Regexp to find scenario IDs in the test names. Default is kebab-case words |
+| `test_report_path` | `test-report-path` | test/reports | Path to the test reports. Expects a relative path to a file or a directory |
+| `locale` | `locale` | fr | Locale for text output. Available values : fr, en |
 
 ### Test result symbols
 
@@ -39,6 +40,7 @@ Or install it yourself as:
 | ✅ | There is a test for this scenario and it PASSES |
 | 😶 | No tests were found for this scenario |
 | ❌ | There is a test for this scenario and if FAILS |
+| ⏩ | There is a SKIPPED test for this scenario |
 
 ### CLI
 
@@ -66,8 +68,10 @@ Or install it yourself as:
     +---------------------------+-------------------------------------+----------------+
     
 
+💡 v0.1.0 users can still print reports with the following command :
+`spec_tracker report --scenario_id_regex="#((\d\.?)*\d)" --scenario-id-header="#Scenario"`
 
-Help to configure the report command :
+Display `report` help :
 
     
     $ spec_tracker help report

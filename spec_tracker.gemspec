@@ -6,7 +6,7 @@ require "spec_tracker/version"
 Gem::Specification.new do |spec|
   spec.name          = "spec_tracker"
   spec.version       = SpecTracker::VERSION
-  spec.licenses      = ['Apache-2.0']
+  spec.licenses      = ['MIT']
   spec.authors       = ["Joanna Vigné"]
   spec.email         = ["joanna.vigne@fabernovel.com"]
 
@@ -23,13 +23,13 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_development_dependency "bundler", "~> 1.17"
+  spec.add_development_dependency "bundler", ">= 1.17"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "minitest", "~> 5.0"
   spec.add_development_dependency "byebug", '~> 9.0'
   spec.add_development_dependency "minitest-reporters", '~> 1.3'
   spec.add_development_dependency "activesupport", '>= 3.0', '< 6.0'
-  spec.add_dependency 'nokogiri', '~> 1.10'
+  spec.add_dependency 'nokogiri', '~> 1.1'
   spec.add_dependency 'terminal-table', '~> 1.8'
   spec.add_dependency 'gemoji', '~> 3.0'
   spec.add_dependency 'thor', '~> 0.20'

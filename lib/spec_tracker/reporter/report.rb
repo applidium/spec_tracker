@@ -9,6 +9,7 @@ module SpecTracker
       end
 
       def progression
+        return unless data.size.positive?
         success_count = data.select {|report_datum| report_datum.status.success?}.size
         (success_count.to_f / data.size.to_f * 100).round(1)
       end
