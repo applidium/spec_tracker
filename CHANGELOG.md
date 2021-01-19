@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.4] - 2021-01-19
+### Changed
+- Drop support for Ruby 2.3, 2.4 and 2.5
+- Update dependencies to the latest versions
+- Drop support for bundler 1.x
+
 ## [1.2.3] - 2019-02-13
 ### Changed
 - Lower nokogiri requirement to 1.1
